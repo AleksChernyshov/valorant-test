@@ -16,8 +16,8 @@ A Valorant leaderboard and match tracking application built with **Next.js, Mant
 Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/your-repo/void-valorant-test.git
-cd void-valorant-test
+git clone https://github.com/AleksChernyshov/valorant-test.git
+cd valorant-test
 npm install
 ```
 To start the development server:
