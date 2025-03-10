@@ -1,0 +1,24 @@
+.playesCard:not(:last-child) {
+  border-bottom: 0.5px solid #ced4da;
+}
+
+.playerCard {
+  background: rgba(30, 30, 40, 0.8);
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(255, 70, 85, 0.4);
+  margin-bottom: 4px; 
+}
+
+.playerCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(255, 70, 85, 0.6);
+}
+
+.highlight {
+  border: 2px solid #ff4655 !important;
+  background: rgba(255, 70, 85, 0.2) !important;
+  box-shadow: 0px 0px 15px rgba(255, 70, 85, 0.8) !important;
+}

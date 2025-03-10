@@ -1,0 +1,74 @@
+.progressSection {
+  &:not(:first-of-type) {
+    border-left: rem(3px) solid light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  }
+}
+
+.leaderboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f1923;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.leaderboardBox {
+  width: 100%;
+  background: #1c252e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #ff4655;
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.7);
+}
+
+.title {
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.table {
+  color: white;
+  background: #1c252e;
+}
+
+.headerRow {
+  background: #ff4655;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.row {
+  transition: background 0.3s ease-in-out;
+}
+
+.row:hover {
+  background: rgba(255, 70, 85, 0.3);
+}
+
+.cell {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.link {
+  text-decoration: none;
+  color: #ff4655;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: white;
+}
+
+.progress {
+  height: 6px;
+  border-radius: 4px;
+}
