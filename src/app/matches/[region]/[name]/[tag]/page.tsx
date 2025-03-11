@@ -20,11 +20,7 @@ const Page = ({ params: { region, name, tag } }: Props) => {
 
   const { data, error, isLoading } = useGetMatchesQuery({ region, name, tag });
   
-  const matches = data
-  ? data.data
-  : "data" in (error as FetchBaseQueryError)
-    ? (error as FetchBaseQueryError).data
-    : null;
+  const matches = data?.data ?? (typeof error === "object" && "data" in error ? (error as any)?.data : null);
   
   const decodedName = decodeURIComponent(name);
 
