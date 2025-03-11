@@ -16,6 +16,10 @@ type Props = {
   }
 }
 
+export async function generateStaticParams() {
+  return [];
+}
+
 const Page = ({ params: { region, name, tag } }: Props) => {
 
   const { data, error, isLoading } = useGetMatchesQuery({ region, name, tag });
