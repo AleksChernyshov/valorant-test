@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import Leaderboard from '@/components/Leaderboard/Leaderboard';
 import CenterLoader from '@/components/Loader/Loader';
 import { Box } from '@mantine/core';
-import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 
 export default function Home() {
   const [currentRegion, setCurrentRegion] = useState('eu');
@@ -48,12 +47,6 @@ export default function Home() {
     }
   }, [isFetchingUp]);
 
-  const fallbackPlayers =
-  error && typeof error === "object" && "data" in error
-    ? (error as any)?.data?.fallbackPlayers ?? []
-    : [];
-
-
   return (
     <Box
       style={{
@@ -69,7 +62,8 @@ export default function Home() {
       ) : (
         <Leaderboard
           currentRegion={currentRegion}
-          players={data ? data.players : fallbackPlayers}
+            // @ts-ignore
+          players={data ? data.players : error?.fallbackPlayers}
         />
       )}
     </Box>

@@ -178,6 +178,15 @@ export const generateRandomMatches = (
         red: { has_won: !isBlueWinner, rounds_won: 10, rounds_lost: 13 },
         blue: { has_won: isBlueWinner, rounds_won: 13, rounds_lost: 10 },
       },
+      rounds: Array.from({ length: 23 }, () => ({
+        winning_team: Math.random() > 0.5 ? "Red" : "Blue",
+        end_type: "Eliminated",
+        bomb_planted: Math.random() > 0.5,
+        bomb_defused: Math.random() > 0.5,
+        plant_events: {},
+        defuse_events: {},
+        player_stats: [],
+      })),
     };
   });
 };
