@@ -6,7 +6,6 @@ import { useGetMatchesQuery } from "@/redux/valorantApi";
 import { IMatch } from "@/types/matches";
 import { Box, Center, Divider, Flex, Text } from "@mantine/core";
 import classes from "./Matches.module.css";
-import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 
 type Props = {
   params: {
@@ -15,8 +14,6 @@ type Props = {
     tag: string,
   }
 }
-
-export const dynamic = "force-dynamic";
 
 const Page = ({ params: { region, name, tag } }: Props) => {
 
