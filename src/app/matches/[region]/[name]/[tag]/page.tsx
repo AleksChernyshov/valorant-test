@@ -6,6 +6,7 @@ import { useGetMatchesQuery } from "@/redux/valorantApi";
 import { IMatch } from "@/types/matches";
 import { Box, Center, Divider, Flex, Text } from "@mantine/core";
 import classes from "./Matches.module.css";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 
 type Props = {
   params: {
@@ -19,7 +20,12 @@ const Page = ({ params: { region, name, tag } }: Props) => {
 
   const { data, error, isLoading } = useGetMatchesQuery({ region, name, tag });
   
-  const matches = data ? data.data : error?.data;
+  const matches = data
+  ? data.data
+  : "data" in (error as FetchBaseQueryError)
+    ? (error as FetchBaseQueryError).data
+    : null;
+  
   const decodedName = decodeURIComponent(name);
 
   if (isLoading) return <CenterLoader />;
