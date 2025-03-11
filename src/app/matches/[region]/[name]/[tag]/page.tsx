@@ -16,9 +16,7 @@ type Props = {
   }
 }
 
-export async function generateStaticParams() {
-  return [];
-}
+export const dynamic = "force-dynamic";
 
 const Page = ({ params: { region, name, tag } }: Props) => {
 
