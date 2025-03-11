@@ -27,3 +27,8 @@ npm run dev
 ```
 
 This will launch the app at http://localhost:3000/.
+
+![app view](image.png)
+![app view](image-1.png)
+![app view](image-2.png)
+![app view](image-3.png)
