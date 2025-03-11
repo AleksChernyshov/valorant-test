@@ -4,7 +4,7 @@ import CenterLoader from "@/components/Loader/Loader";
 import PlayerKDA from "@/components/PlayerKDA/PlayerKDA";
 import { useGetMatchesQuery } from "@/redux/valorantApi";
 import { IMatch } from "@/types/matches";
-import { Box, Center, Divider, Flex, Text } from "@mantine/core";
+import { Box, Center, Flex, Text } from "@mantine/core";
 import classes from "./Matches.module.css";
 
 type Props = {
